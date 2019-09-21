@@ -20,10 +20,10 @@ public class Notes {
 	public void setTitulo(String titulo) {
 		this.titulo = titulo;
 	}
-	public String getNotas() {
+	public String getNota() {
 		return nota;
 	}
-	public void setNotas(String nota) {
+	public void setNota(String nota) {
 		this.nota = nota;
 	}
 	

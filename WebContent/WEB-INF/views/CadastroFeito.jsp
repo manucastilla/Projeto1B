@@ -5,10 +5,10 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>erro login</title>
+<title>Cadastro feito</title>
 </head>
 <body>
-<p> ERRO NO CADASTRO, TENTE DE NOVO</p>
-<a href="entrar" class="entrar"> voltar</a>
+<p> Cadastro feito!</p>
+<a href="entrar" class="PaginaInicial"> voltar</a>
 </body>
 </html>

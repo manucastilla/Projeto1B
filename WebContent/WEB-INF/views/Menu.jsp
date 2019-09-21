@@ -22,7 +22,7 @@
 </head>
 <body>
 <jsp:useBean id="dao" class="mvc.model.NotesDAO"/>
-<a href ="PaginaInicial.html">sair</a><br>
+<a href ="logout">sair</a><br>
 	<%!String user;%>
 
 	<%
@@ -58,12 +58,12 @@
 	%>
 	
 	<div class="card border-primary bg-primary mb-3" style="max-width: 18rem;">
-	<form action="editaGet" method="get">
+	<form action="editaGet" method="post">
 	    <h5 class="card-title"><%=nota.getTitulo()%></h5>
-	    <p class="card-text"><%=nota.getNotas()%></p>
+	    <p class="card-text"><%=nota.getNota()%></p>
 	    <input name="user" type="hidden" value= "${user}">
 	    <input name="titulo" value="<%=nota.getTitulo()%>" type="hidden">
-	    <input name="nota" value="<%=nota.getNotas()%>" type="hidden">
+	    <input name="nota" value="<%=nota.getNota()%>" type="hidden">
 	    <input name="id" value="<%=nota.getId()%>" type="hidden">
 	   	<input type="submit" value="editar">
 	</form>

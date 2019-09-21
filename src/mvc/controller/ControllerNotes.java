@@ -28,10 +28,10 @@ public class ControllerNotes {
 	@RequestMapping("editaGet")
 	public String editaPost(Notes note, HttpSession session) {		
 		session.setAttribute("user", note.getUser());
-		session.setAttribute("nota", note.getNotas());
+		session.setAttribute("nota", note.getNota());
 		session.setAttribute("titulo", note.getTitulo());
 		session.setAttribute("id", note.getId());
-		return "Editar" ;}
+		return "Editar";}
 	
 	@RequestMapping("editaPost")
 	public String editaPost(Notes note) throws SQLException {		

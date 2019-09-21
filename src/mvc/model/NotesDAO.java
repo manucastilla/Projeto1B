@@ -29,7 +29,7 @@ public class NotesDAO {
 			PreparedStatement stmt = connection.prepareStatement(sql);
 			stmt.setString(1, notinhas.getUser());
 			stmt.setString(2, notinhas.getTitulo());
-			stmt.setString(3, notinhas.getNotas());
+			stmt.setString(3, notinhas.getNota());
 
 			stmt.execute();
 			stmt.close();
@@ -68,7 +68,7 @@ public class NotesDAO {
 		try {
 			PreparedStatement stmt = connection.prepareStatement(sql);
 			stmt.setString(1, notinhas.getTitulo());
-			stmt.setString(2, notinhas.getNotas());
+			stmt.setString(2, notinhas.getNota());
 			stmt.setInt(3, notinhas.getId());
 
 			stmt.execute();
@@ -101,7 +101,6 @@ public class NotesDAO {
 				Notes nota = new Notes();
 				nota.setUser(rs.getString("pessoa"));
 				nota.setTitulo(rs.getString("titulo_nota"));
-				nota.setNotas(rs.getString("notas"));
 				nota.setId(rs.getInt("id"));
 				notas.add(nota);
 				}
