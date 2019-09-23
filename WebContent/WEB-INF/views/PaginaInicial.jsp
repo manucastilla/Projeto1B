@@ -30,11 +30,11 @@
 <form action="fazSignUp" method="post">
     <div>
         <label for="nome">Username:</label>
-        <input type="text" id="nome" name="userLogin"/>
+        <input type="text" id="nome" name="login"/>
     </div>
     <div>
         <label for="password">Senha:</label>
-        <input type="password" id="password" name="userPassword" />
+        <input type="password" id="password" name="password" />
     </div>
         <div>
         

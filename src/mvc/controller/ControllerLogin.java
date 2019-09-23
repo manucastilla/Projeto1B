@@ -39,6 +39,7 @@ public class ControllerLogin {
 			@ModelAttribute("password") String password, 
 			@ModelAttribute("checkPassword") String checkPassword) throws SQLException {
 		UserDAO dao = new UserDAO();
+		System.out.println(dao.verificationC(user));
 		if (dao.verificationC(user)) {
 			return "CadastroFeito";}
 		else {

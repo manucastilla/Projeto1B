@@ -8,11 +8,14 @@ import java.sql.SQLException;
 
 public class UserDAO {
 	private Connection connection = null;
+	String url = System.getenv("mysql_url");
+	String user = System.getenv("mysql_user");
+	String password = System.getenv("mysql_password");
 
 	public UserDAO() throws SQLException{
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			connection = DriverManager.getConnection("jdbc:mysql://localhost/projeto1" , "root" ,"N1n1354123");
+			connection = DriverManager.getConnection(url, user, password);
 
 		} catch (SQLException | ClassNotFoundException e) {
 			// TODO Auto-generated catch block
@@ -27,6 +30,7 @@ public class UserDAO {
 		try {
 			PreparedStatement stmt = connection.prepareStatement(sql);
 			stmt.setString(1, user.getLogin());
+			System.out.print(user.getLogin());
 			ResultSet rs = stmt.executeQuery();
 			st = rs.next();
 			stmt.execute();

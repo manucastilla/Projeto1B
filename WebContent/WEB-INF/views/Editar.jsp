@@ -28,7 +28,7 @@
 	%>
 	
 	<%=user%><br>
-		<form action="editar" method="get">
+		<form action="editaPost" method="post">
 			<input type="hidden" name="nome" value="<%=user%>" readonly>
 			<input type="hidden" name="id" value="<%=id%>" readonly>
 			<label for="nome">Assunto:</label> <br />
@@ -36,9 +36,8 @@
 				name="titulo" size="40" maxlength="100" value="<%=titulo%>"><br /> 
 				<label>Notas:</label><br />
 			<textarea  rows="10" cols="40" name="nota"><%=nota%></textarea>
-			<div class="button">
-				<button type="submit">Atualizar</button>
-			</div>
+	   	<input type="submit" value="editar">
+			
 		</form>
 	
 </body>

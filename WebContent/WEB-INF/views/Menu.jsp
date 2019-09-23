@@ -58,7 +58,7 @@
 	%>
 	
 	<div class="card border-primary bg-primary mb-3" style="max-width: 18rem;">
-	<form action="editaGet" method="post">
+	<form action="editaGet" method="get">
 	    <h5 class="card-title"><%=nota.getTitulo()%></h5>
 	    <p class="card-text"><%=nota.getNota()%></p>
 	    <input name="user" type="hidden" value= "${user}">

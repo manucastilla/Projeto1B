@@ -8,7 +8,7 @@
 <title>Cadastro feito</title>
 </head>
 <body>
-<p> Cadastro feito!</p>
+<p> Já existe esse username, tente outro!</p>
 <a href="entrar" class="PaginaInicial"> voltar</a>
 </body>
 </html>

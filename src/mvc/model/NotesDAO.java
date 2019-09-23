@@ -11,10 +11,18 @@ import java.util.List;
 public class NotesDAO {
 	private Connection connection = null;
 
+	
+	
+	
+	
+	String url = System.getenv("mysql_url");
+	String user = System.getenv("mysql_user");
+	String password = System.getenv("mysql_password");
+	
 	public NotesDAO() throws SQLException{
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			connection = DriverManager.getConnection("jdbc:mysql://localhost/projeto1" , "newuser" ,"user_password");
+			connection = DriverManager.getConnection(url, user, password);
 
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
@@ -101,6 +109,7 @@ public class NotesDAO {
 				Notes nota = new Notes();
 				nota.setUser(rs.getString("pessoa"));
 				nota.setTitulo(rs.getString("titulo_nota"));
+				nota.setNota(rs.getString("notas"));
 				nota.setId(rs.getInt("id"));
 				notas.add(nota);
 				}
